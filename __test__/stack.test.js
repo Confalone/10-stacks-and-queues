@@ -35,4 +35,25 @@ describe('stack', () => {
       testStack.pop();
     }).toThrow('Stack is empty');
   });  
+
+  it('testing that serialize method returns serialized stack data', () => {
+    let testStack = new Stack();
+
+    testStack.push('NYT');
+    testStack.push('WP');
+    testStack.push('NE');
+  
+    let data = testStack.serialize();
+
+    expect(data).toBe('["NYT","WP","NE"]');
+  });
+
+  it('testing that deserialize method returns a parsed json array', () => {
+    let testStack = new Stack();
+    let data = '["NYT","WP","NE"]';
+
+    testStack.deserialize(data);
+
+    expect(testStack.stack).toEqual(['NE', 'WP', 'NYT']);
+  });
 });
