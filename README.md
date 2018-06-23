@@ -108,3 +108,8 @@
     expect(testQueue.queue).toEqual(['NYT', 'WP', 'NE']);
 
   ```
+
+
+
+### License 
+MIT © Tyler Confalone
