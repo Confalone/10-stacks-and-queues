@@ -7,7 +7,7 @@
 ### Methods - FIFO
 #### `push(papers)` 
   * Push method accepts papers as an argument and adds it to the stack.
-
+  * Big O(1) - because it is only concerned with one item
   ```
       let testStack = new Stack();
 
@@ -17,7 +17,7 @@
   ```
 #### `pop()`
   * Pop method does not accept any arguments and removes the last item from the stack.
-
+  * Big O(1) - becuase it is only concerned with one item
   ```
       let testStack = new Stack();
 
@@ -31,7 +31,7 @@
   ```
 #### `serialize()`
   * Serialize method returns a JSON object containing the stack data.
-
+  * Big O(n) - depends on how long the stack that is being serialized is
   ```
     let testStack = new Stack();
 
@@ -45,6 +45,7 @@
   ```
 #### `deserialize(data)`
   * Deserialize method accepts an argument of data and turns it into a valid stack.
+  * Big O(n) - depends on how long the stack that is being deserialized is
   ```
    let testStack = new Stack();
     let data = '["NYT","WP","NE"]';
@@ -59,6 +60,7 @@
 ### Methods
 #### `enqueue(papers)`
   * Enqueue method accept papers as an argument and will add an item into the queue.
+  * Big O(1) - becuase it is only concerned with one queue item
   ```
         let q = new Queue();
     q.enqueue(1);
@@ -68,6 +70,7 @@
   ```
 #### `dequeue()`
   * Dequeue method does not accept any arguments and removes the first item from the queue.
+  * Big O(1) - becuase it is only concerned with one queue item
   ```
       let q = new Queue();
     q.enqueue(1);
@@ -84,6 +87,7 @@
   ```
 #### `serialize()`
   * Serialize method does not accept any arguments and returns a JSON string that represents the queue data.
+  * Big O(n) - depends on how long the queue that is being serialized is
   ```
       let testQueue = new Queue();
 
@@ -98,7 +102,7 @@
 
 #### `deserialize(data)`
   * Deserialize accepts a JSON object as an argument.
-
+  * Big O(n) - depends on how long the queue that is being deserialized is
   ```
   let testQueue = new Queue();
     let data = '["NYT","WP","NE"]';
